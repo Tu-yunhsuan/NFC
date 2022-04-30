@@ -75,7 +75,7 @@ body{
 }
 #unlock{
     text-align: center;
-    position: static;
+    position: fixed;
     bottom: 30px;
 }
 /* ---------------------簡訊頁面--------------------- */
@@ -91,7 +91,7 @@ body{
     background-color: rgb(204, 204, 204);
 }
 #content_box{
-    height: 80%;
+    height: 75%;
     width: 100%;
     background-color: rgb(245, 245, 245);
     overflow:auto;
@@ -101,11 +101,11 @@ body{
     width: 100%;
 } */
 #input_box{
-    height: 10%;
+    height: 15%;
     width: 100%;
     background-color: rgb(206, 206, 206);
-    position: sticky;
-    bottom: 0px;
+    /* position: fixed;
+    bottom: 0px; */
     display: flex;
 }
 /* 標題列 */
@@ -144,7 +144,7 @@ body{
 #input_text{
     width: 80%;
     height: 60%;
-    margin: auto 0px auto 5px;
+    margin: 10px 0px auto 5px;
 }
 #send{
     margin: auto;
@@ -158,16 +158,20 @@ body{
     display: flex;
     float: right;
     margin: 5px;
+    /* width: 100%; */
 }
 .append_text{
     width: 100%;
+    max-width: 180px;
+    min-width: 100px;
     padding: 10px;
-    margin: 10px 10px 5px 400px;
+    margin: 10px 10px 5px 100px;
     border-radius: 10px;
     background-color: rgb(228, 228, 228);
     text-align: left;
     word-break: break-all;
     white-space:pre-wrap;
+    /* float: right; */
 }
 /* ------------------------------------------------------------- */
 /* 尺寸設定 */
