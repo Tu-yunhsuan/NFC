@@ -75,7 +75,7 @@ body{
 }
 #unlock{
     text-align: center;
-    position: fixed;
+    position: static;
     bottom: 30px;
 }
 /* ---------------------簡訊頁面--------------------- */
@@ -104,8 +104,8 @@ body{
     height: 10%;
     width: 100%;
     background-color: rgb(206, 206, 206);
-    /* position: fixed;
-    bottom: 0px; */
+    position: sticky;
+    bottom: 0px;
     display: flex;
 }
 /* 標題列 */
