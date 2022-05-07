@@ -96,12 +96,14 @@ body{
     background-color: rgb(245, 245, 245);
     overflow:auto;
 }
-/* #space{
-    height: 10%;
+#default_box{
+    height: 5%;
     width: 100%;
-} */
+    display: inline-flex;
+    background-color: rgb(206, 206, 206);
+}
 #input_box{
-    height: 15%;
+    height: 10%;
     width: 100%;
     background-color: rgb(206, 206, 206);
     /* position: fixed;
@@ -155,17 +157,18 @@ body{
 }
 /* 送出 */
 .content_append{
-    display: flex;
+    display: inline-flex;
     float: right;
     margin: 5px;
-    /* width: 100%; */
+    clear: both;
 }
 .append_text{
+    height: fit-content;
     width: 100%;
     max-width: 180px;
     min-width: 100px;
     padding: 10px;
-    margin: 10px 10px 5px 100px;
+    margin: 10px;
     border-radius: 10px;
     background-color: rgb(228, 228, 228);
     text-align: left;
@@ -173,6 +176,41 @@ body{
     white-space:pre-wrap;
     /* float: right; */
 }
+.append_text p{
+    display: none;
+}
+/* 預設訊息 */
+.default_btn{
+    display: flex;
+    margin: 5px 10px 0px 10px;
+    padding: 2px 5px;
+    font-weight: bold;
+}
+.content_clue{
+    display: flex;
+    margin: 5px;
+    float: left;
+    clear: right;
+}
+.clue_img{
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+.clue_text{
+    width: 150px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(192, 192, 192);
+    text-align: left;
+}
+
+
+
+
+
+
 /* ------------------------------------------------------------- */
 /* 尺寸設定 */
 @media (min-width: 450px) {

@@ -42,6 +42,60 @@ $(document).ready(function(){
             $('#input_text').val('');
             $count_send++;
         }
-    })
+    });
+    //預設訊息
+    $('.default_btn').click(function(){
+        if($count_send<1){
+            $current_date = year + "年"+ month + "月" + day + "日";
+            $('#content_box').append('<div class="content_date">'+$current_date+'</div>');
+        }
+        $count_send++;
+        $('#content_box').append(
+            '<div class="content_append"><div class="append_text">'
+            +$(this).html()+'</div></div>');
+
+        var $clue_1="這是線索一 早安";
+        var $clue_2="這是線索二這是線索二這是線索二";
+        var $clue_3="這是線索三這是線索三這是線索三";
+        if(this.id == 'default_message_1'){
+            $('#content_box').append(
+            $('<div class="content_clue id="clue'+$count_send+' style="display:flex;"">'
+            + '<img class="clue_img" src="img/user.svg">'
+            + '<p class="clue_text">'+ $clue_1 +'</p>'
+            + '</div>').hide().fadeIn(2000));
+        }
+        if(this.id == 'default_message_2'){
+            $('#content_box').append(
+            $('<div class="content_clue id="clue'+$count_send+' style="display:flex;"">'
+            + '<img class="clue_img" src="img/user.svg">'
+            + '<p class="clue_text">'+ $clue_2 +'</p>'
+            + '</div>').hide().fadeIn(2000));
+        }
+        if(this.id == 'default_message_3'){
+            $('#content_box').append(
+            $('<div class="content_clue id="clue'+$count_send+' style="display:flex;"">'
+            + '<img class="clue_img" src="img/user.svg">'
+            + '<p class="clue_text">'+ $clue_3 +'</p>'
+            + '</div>').hide().fadeIn(2000));
+        }
         
+    });
+    // $('#default_message_1').click(function(){
+    //     var $message_1="這是預設訊息一";
+    //     var $clue_1="這是線索一這是線索一這是線索一";
+    //     if($count_send<1){
+    //         $current_date = year + "年"+ month + "月" + day + "日";
+    //         $('#content_box').append('<div class="content_date">'+$current_date+'</div>');
+    //     }
+    //     $count_send++;
+    //     $('#content_box').append(
+    //         '<div class="content_append"><div class="append_text">'
+    //         +$message_1+'</div></div>');
+        
+    //     $('#content_box').append(
+    //         $('<div class="content_clue id="clue'+$count_send+' style="display:flex;"">'
+    //         + '<img class="clue_img" src="img/user.svg">'
+    //         + '<p class="clue_text">'+ $clue_1 +'</p>'
+    //         + '</div>').hide().fadeIn(2000));
+    // });
 });
