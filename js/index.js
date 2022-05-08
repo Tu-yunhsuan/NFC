@@ -1,31 +1,40 @@
 // 日期
-date = new Date();
-year = date.getFullYear();
-month = date.getMonth() + 1;
-day = date.getDate();
-hour=date.getHours();
-minute=date.getMinutes();
-second=date.getSeconds();
-if(minute < 10){displayMinute = "0" + minute.toString();}
-else{displayMinute = minute;}
-if(hour < 10){displayHour = "0" + hour.toString();}
-else{displayHour = hour;}
-
-document.getElementById("current_date").innerHTML = year + "年"+ month + "月" + day + "日" ;
-document.getElementById("current_time").innerHTML = displayHour + ":" + displayMinute ;
+function mynow(){
+    date = new Date();
+    year = date.getFullYear();
+    month = date.getMonth() + 1;
+    day = date.getDate();
+    hour=date.getHours();
+    minute=date.getMinutes();
+    second=date.getSeconds();
+    if(minute < 10){displayMinute = "0" + minute.toString();}
+    else{displayMinute = minute;}
+    if(hour < 10){displayHour = "0" + hour.toString();}
+    else{displayHour = hour;}
+    if(hour < 10){displaySecond = "0" + second.toString();}
+    else{displaySecond = second;}
+}
+function now_time(){
+    mynow();
+    document.getElementById("current_date").innerHTML = year + "年"+ month + "月" + day + "日" ;
+    document.getElementById("current_time").innerHTML = displayHour + ":" + displayMinute ;
+    setTimeout('now_time()',1000);
+}
 
 $(document).ready(function(){
     // 頁面轉換
     $('.message').click(function(){
         $('#Message_page').show();
     });
-    $('#unclock_img').click(function(){
+    $('.scan').click(function(){
         $('#Message_page').show();
     });
     $('#back_btn').click(function(){
         $('#Message_page').hide();
         $('#message_box').hide();
     });
+    // 桌布頁面
+    $('.message').hide().slideDown(800);
     // 簡訊頁面
     var $count_send=0;
     $('#send').click(function(){

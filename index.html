@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery-1.11.0.min.js"></script>
 </head>
-<body>
+<body onload="now_time()">
     <!------------ 桌布頁面 ------------>
     <div class="container" id="Desktop_page">
         <div id="clock">
@@ -32,9 +32,13 @@
             </div>
         </div>
 
-        <div id="unlock">
+        <!-- <div id="unlock">
             <img id="unclock_img" src="img/unlock.svg" width="40px" height="40px">
-            <!-- <p>手機已解鎖</p> -->
+        </div> -->
+
+        <div class="scan">
+            <div class="fingerprint"></div>
+            <h3>Scaning...</h3>
         </div>
     </div>
 
