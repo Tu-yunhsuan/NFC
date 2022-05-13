@@ -63,9 +63,9 @@ $(document).ready(function(){
             '<div class="content_append"><div class="append_text">'
             +$(this).html()+'</div></div>');
 
-        var $clue_1="早安啊！想我了嗎❤";
-        var $clue_2="我怎麼會是跟蹤你？我當然是在你身後保護妳啊！";
-        var $clue_3="你該不會忘記我了吧？最好快點想起我是誰喔！";
+        var $clue_1="我送的香水要乖乖噴喔！不噴的話知道後果是甚麼吧？";
+        var $clue_2="騷擾？我這是愛你的表現！";
+        var $clue_3="放心吧，我會很溫柔的對待你的😊";
         if(this.id == 'default_message_1'){
             $('#content_box').append(
                 $('<div class="content_clue" style="display:flex;">'
@@ -77,11 +77,7 @@ $(document).ready(function(){
                 + '<img class="clue_img" src="img/user.svg">'
                 + '<p class="clue_text">'+ $clue_1 +'</p>'
                 + '</div>').hide().fadeIn(1000))},4000);
-            // $('#content_box').append(
-            // $('<div class="content_clue id="clue'+$count_send+' style="display:flex;"">'
-            // + '<img class="clue_img" src="img/user.svg">'
-            // + '<p class="clue_text">'+ $clue_1 +'</p>'
-            // + '</div>').hide().fadeIn(2000));
+           
         }
         if(this.id == 'default_message_2'){
             $('#content_box').append(
@@ -109,22 +105,5 @@ $(document).ready(function(){
         }
         
     });
-    // $('#default_message_1').click(function(){
-    //     var $message_1="這是預設訊息一";
-    //     var $clue_1="這是線索一這是線索一這是線索一";
-    //     if($count_send<1){
-    //         $current_date = year + "年"+ month + "月" + day + "日";
-    //         $('#content_box').append('<div class="content_date">'+$current_date+'</div>');
-    //     }
-    //     $count_send++;
-    //     $('#content_box').append(
-    //         '<div class="content_append"><div class="append_text">'
-    //         +$message_1+'</div></div>');
-        
-    //     $('#content_box').append(
-    //         $('<div class="content_clue id="clue'+$count_send+' style="display:flex;"">'
-    //         + '<img class="clue_img" src="img/user.svg">'
-    //         + '<p class="clue_text">'+ $clue_1 +'</p>'
-    //         + '</div>').hide().fadeIn(2000));
-    // });
+    
 });

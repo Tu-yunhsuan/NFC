@@ -164,13 +164,13 @@ body{
     background-color: rgb(204, 204, 204);
 }
 #content_box{
-    height: 75%;
+    height: 72%;
     width: 100%;
     background-color: rgb(245, 245, 245);
     overflow:auto;
 }
 #default_box{
-    height: 5%;
+    height: 8%;
     width: 100%;
     display: inline-flex;
     background-color: rgb(206, 206, 206);
@@ -257,7 +257,7 @@ body{
 /* 預設訊息 */
 .default_btn{
     display: flex;
-    margin: 10px 10px 0px 10px;
+    margin: auto 5px auto 5px;
     padding: auto 5px;
     font-weight: bold;
     height: fit-content;
@@ -283,7 +283,24 @@ body{
     text-align: left;
 }
 
-
+/* loading text */
+@keyframes caret{
+    50%{border-color:transparent;}
+}
+@keyframes text {
+    from {width: 0;}
+}
+.load-text{
+    width: 6ch;
+    margin: 0 5px;
+    overflow: hidden;
+    word-break: keep-all;
+    /* background: rgba(0, 0, 0, 0.2); */
+    color: #0f0f0f;
+    border-right: 1.5px solid #000000;
+    font: bold 100% monospace;
+    animation: caret 0.5s step-end infinite , text 5s infinite steps(6) ;
+}
 
 
 
